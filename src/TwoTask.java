@@ -10,16 +10,14 @@ public class TwoTask {
         double k = scanner.nextInt();
         int r = 0;
         double a = 0;
-        for (int i = 0; i < n ; i++){
+        for (int i = 0; i < n; i++) {
 
-            a =  a + (m/k);
+            a = a + (m / k);
             r++;
-            if (a >= n){
+            if (a >= n) {
                 break;
             }
         }
-
-
 
         System.out.println(r);
     }

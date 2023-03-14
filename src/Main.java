@@ -1,38 +1,57 @@
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-         sequence();
-    }
-
-    public static void sequence()
-    {
-        Scanner scanner = new Scanner(System.in);
-
-        int n =4;
-        int[] array = new int[4];
-        System.out.println("Enter numbers: ");
-        for (int i = 0; i < n; i++)
-        {
-
-
-            array[i] = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int h1 = sc.nextInt();
+        int h2 = sc.nextInt();
+        int h3 = sc.nextInt();
+        int h4 = sc.nextInt();
+        if (h1 <= h2 && h2 <= h3 && h3 <= h4){
+            System.out.println("YES");
+        }else if (h1 >= h2 && h2 >= h3 && h3 >= h4){
+            System.out.println("YES");
+        }else{
+            System.out.println("NO");
         }
-
-
-        boolean isAscending = array[0] < array[1];
-        boolean descending = array[0] > array[1];
-        for (int i = 2; i < array.length; i++)
-        {
-            if ((array[i - 1] > array[i] && isAscending) ||
-                    (array[i - 1] < array[i] && descending))
-            {
-                System.out.println("NO");
-                return;
-            }
-
-        }
-        System.out.println("YES");
     }
 }
+
+
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        ChekYESorNO();
+//    }
+//
+//    public static void ChekYESorNO() {
+//        Scanner ourNumber = new Scanner(System.in);
+//
+//        int n = 4;
+//        int[] array = new int[4];
+//        System.out.println("Введите числа >= 0 и <=300: ");
+//        for (int i = 0; i < n; i++) {
+//            int emp = ourNumber.nextInt();
+//            if (emp >= 0 && emp <= 300) {
+//                array[i] = emp;
+//            } else {
+//                System.out.println("Числа должно быть >= 0  и  <=300");
+//                return;
+//            }
+//        }
+//
+//        boolean isAscending = array[0] < array[1];
+//        boolean descending = array[0] > array[1];
+//        for (int i = 2; i < array.length; i++) {
+//            if ((array[i - 1] > array[i] && isAscending) || (array[i - 1] < array[i] && descending)) {
+//                System.out.println("NO");
+//                return;
+//            }
+//
+//        }
+//        System.out.println("YES");
+//    }
+//}
 
