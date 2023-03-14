@@ -13,16 +13,17 @@ public class Task5 {
         solver.solve(in, out);
         out.close();
     }
+
     static class Task {
         public void solve(InputReader in, PrintWriter out) {
             int n = in.nextInt();
-            int[] a = new int[n + 1];
+            int[] array = new int[n + 1];
             for (int i = 1; i <= n; i++) {
-                a[i] = in.nextInt();
+                array[i] = in.nextInt();
             }
             long[] p = new long[n + 1];
             for (int i = 1; i <= n; i++) {
-                p[i] = p[i - 1] + a[i];
+                p[i] = p[i - 1] + array[i];
             }
             Map<Long, Integer> last = new HashMap<>();
             last.put(0L, 0);
@@ -43,13 +44,16 @@ public class Task5 {
             out.println(ans);
         }
     }
+
     static class InputReader {
         public BufferedReader reader;
         public StringTokenizer tokenizer;
+
         public InputReader(InputStream stream) {
             reader = new BufferedReader(new InputStreamReader(stream), 32768);
             tokenizer = null;
         }
+
         public String next() {
             while (tokenizer == null || !tokenizer.hasMoreTokens()) {
                 try {
@@ -60,6 +64,7 @@ public class Task5 {
             }
             return tokenizer.nextToken();
         }
+
         public int nextInt() {
             return Integer.parseInt(next());
         }
