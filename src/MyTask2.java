@@ -20,7 +20,7 @@ public class MyTask2 {
             }
             else {
                 min = (int) (m * 0.5 / k * n);
-            }git
+            }
         }
         System.out.println(min);
     }
