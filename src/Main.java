@@ -19,37 +19,37 @@
 //}
 
 
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        ChekYESorNO();
-    }
-
-    public static void ChekYESorNO() {
-        Scanner ourNumber = new Scanner(System.in);
-
-        int n = 4;
-        int[] array = new int[4];
-        for (int i = 0; i < n; i++) {
-            int emp = ourNumber.nextInt();
-            if (emp >= 0 && emp <= 300) {
-                array[i] = emp;
-            } else {
-                return;
-            }
-        }
-
-        boolean isAscending = array[0] < array[1];
-        boolean descending = array[0] > array[1];
-        for (int i = 2; i < array.length; i++) {
-            if ((array[i - 1] > array[i] && isAscending) || (array[i - 1] < array[i] && descending)) {
-                System.out.println("NO");
-                return;
-            }
-
-        }
-        System.out.println("YES");
-    }
-}
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        ChekYESorNO();
+//    }
+//
+//    public static void ChekYESorNO() {
+//        Scanner ourNumber = new Scanner(System.in);
+//
+//        int n = 4;
+//        int[] array = new int[4];
+//        for (int i = 0; i < n; i++) {
+//            int emp = ourNumber.nextInt();
+//            if (emp >= 0 && emp <= 300) {
+//                array[i] = emp;
+//            } else {
+//                return;
+//            }
+//        }
+//
+//        boolean isAscending = array[0] < array[1];
+//        boolean descending = array[0] > array[1];
+//        for (int i = 2; i < array.length; i++) {
+//            if ((array[i - 1] > array[i] && isAscending) || (array[i - 1] < array[i] && descending)) {
+//                System.out.println("NO");
+//                return;
+//            }
+//
+//        }
+//        System.out.println("YES");
+//    }
+//}
 
